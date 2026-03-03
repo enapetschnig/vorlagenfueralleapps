@@ -20,7 +20,7 @@ export default defineConfig(({ mode }) => ({
         name: 'Tischlerei Birgmann',
         short_name: 'Birgmann',
         description: 'Baustellendokumentation und Zeiterfassung',
-        theme_color: '#4a6741',
+        theme_color: '#8C3810',
         background_color: '#ffffff',
         display: 'standalone',
         start_url: '/',
