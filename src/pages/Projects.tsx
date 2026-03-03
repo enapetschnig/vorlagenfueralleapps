@@ -369,10 +369,10 @@ const Projects = () => {
               <Button variant="ghost" size="icon" onClick={() => navigate("/")}>
                 <Home className="h-5 w-5" />
               </Button>
-              <img 
-                src="/epower-logo.png" 
-                alt="ePower GmbH" 
-                className="h-8 w-8 sm:h-10 sm:w-10 cursor-pointer hover:opacity-80 transition-opacity object-contain" 
+              <img
+                src="/birgmann-logo.png"
+                alt="Tischlerei Birgmann"
+                className="h-8 w-8 sm:h-10 sm:w-10 cursor-pointer hover:opacity-80 transition-opacity object-contain"
                 onClick={() => navigate("/")}
               />
             </div>

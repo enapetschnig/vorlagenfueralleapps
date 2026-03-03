@@ -21,7 +21,7 @@ export function PageHeader({ title, showBackButton = true, backPath }: PageHeade
 
   return (
     <header className="border-b bg-card sticky top-0 z-50 shadow-sm">
-      <div className="container mx-auto px-3 sm:px-4 lg:px-6 py-3 sm:py-4">
+      <div className="container mx-auto px-3 sm:px-4 lg:px-6 py-2 sm:py-3">
         <div className="flex items-center gap-2 sm:gap-4">
           {showBackButton && (
             <Button variant="ghost" size="sm" onClick={handleBack}>
@@ -29,10 +29,10 @@ export function PageHeader({ title, showBackButton = true, backPath }: PageHeade
               <span className="hidden sm:inline">Zurück</span>
             </Button>
           )}
-          <img 
-            src="/epower-logo.png" 
-            alt="ePower GmbH" 
-            className="h-8 w-8 sm:h-10 sm:w-10 cursor-pointer hover:opacity-80 transition-opacity object-contain" 
+          <img
+            src="/birgmann-logo.png"
+            alt="Tischlerei Birgmann"
+            className="h-10 sm:h-12 w-auto cursor-pointer hover:opacity-80 transition-opacity object-contain"
             onClick={() => navigate("/")}
           />
           {title && (

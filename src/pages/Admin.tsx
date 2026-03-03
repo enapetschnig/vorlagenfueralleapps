@@ -566,10 +566,10 @@ export default function Admin() {
               <ArrowLeft className="h-4 w-4 mr-2" />
               <span className="hidden sm:inline">Zurück</span>
             </Button>
-            <img 
-              src="/epower-logo.png" 
-              alt="ePower GmbH" 
-              className="h-8 w-8 sm:h-10 sm:w-10 cursor-pointer hover:opacity-80 transition-opacity object-contain" 
+            <img
+              src="/birgmann-logo.png"
+              alt="Tischlerei Birgmann"
+              className="h-8 w-8 sm:h-10 sm:w-10 cursor-pointer hover:opacity-80 transition-opacity object-contain"
               onClick={() => navigate("/")}
             />
             <div className="flex-1">

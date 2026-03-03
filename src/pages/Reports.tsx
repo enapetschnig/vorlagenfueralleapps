@@ -225,7 +225,7 @@ const Reports = () => {
           </table>
           
           <div class="footer">
-            <p>ePower GmbH - Stundenauswertung</p>
+            <p>Tischlerei Birgmann - Stundenauswertung</p>
           </div>
         </body>
         </html>

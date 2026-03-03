@@ -62,9 +62,9 @@ const Dashboard = () => {
       <div className="container mx-auto px-4 py-8 max-w-6xl">
         <div className="mb-8">
           <div className="flex items-center gap-4 mb-4">
-            <img src="/epower-logo.png" alt="ePower GmbH" className="h-16 w-16 object-contain" />
+            <img src="/birgmann-logo.png" alt="Tischlerei Birgmann" className="h-16 w-16 object-contain" />
             <div>
-              <h1 className="text-4xl font-bold text-foreground">ePower GmbH</h1>
+              <h1 className="text-4xl font-bold text-foreground">Tischlerei Birgmann</h1>
               <p className="text-muted-foreground">Digitale Baustellendokumentation</p>
             </div>
           </div>
