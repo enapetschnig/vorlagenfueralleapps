@@ -17,10 +17,10 @@ export default defineConfig(({ mode }) => ({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png'],
       manifest: {
-        name: 'Tischlerei Birgmann',
-        short_name: 'Birgmann',
+        name: 'KUNDENNAME',
+        short_name: 'KUNDENNAME',
         description: 'Baustellendokumentation und Zeiterfassung',
-        theme_color: '#4a6741',
+        theme_color: '#785440',
         background_color: '#ffffff',
         display: 'standalone',
         start_url: '/',
