@@ -67,6 +67,7 @@ export default function HoursReport() {
   const [projects, setProjects] = useState<Record<string, Project>>({});
   const [isAdmin, setIsAdmin] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [companySettings, setCompanySettings] = useState({ name: "", address: "", email: "" });
 
   const years = Array.from({ length: 5 }, (_, i) => new Date().getFullYear() - 2 + i);
 
@@ -74,7 +75,16 @@ export default function HoursReport() {
     checkAdminStatus();
     fetchProfiles();
     fetchProjects();
+    fetchCompanySettings();
   }, []);
+
+  const fetchCompanySettings = async () => {
+    const { data } = await supabase.from("app_settings").select("key, value").in("key", ["company_name", "company_address", "company_email"]);
+    if (data) {
+      const settings = Object.fromEntries(data.map(({ key, value }) => [key, value]));
+      setCompanySettings({ name: settings.company_name || "", address: settings.company_address || "", email: settings.company_email || "" });
+    }
+  };
 
   useEffect(() => {
     if (selectedUserId) {
@@ -231,9 +241,9 @@ export default function HoursReport() {
 
     const worksheetData: any[][] = [
       // Firmendaten Header
-      ["ePower GmbH", "", "", "", "", "", "", "", "", "", "", ""],
-      ["Frojacher Straße 5, 8841 Frojach", "", "", "", "", "", "", "", "", "", "", ""],
-      ["E-Mail: hallo@epowergmbh.at", "", "", "", "", "", "", "", "", "", "", ""],
+      [companySettings.name, "", "", "", "", "", "", "", "", "", "", ""],
+      [companySettings.address, "", "", "", "", "", "", "", "", "", "", ""],
+      [`E-Mail: ${companySettings.email}`, "", "", "", "", "", "", "", "", "", "", ""],
       ["", "", "", "", "", "", "", "", "", "", "", ""],
       ["Dienstnehmer:", "", employeeName, "", "", "", "", "", "Monat:", `${monthNamesShort[month - 1]}-${year.toString().slice(-2)}`, "", ""],
       ["", "", "", "", "", "", "", "", "", "", "", ""],

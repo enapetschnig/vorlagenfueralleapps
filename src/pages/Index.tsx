@@ -202,7 +202,7 @@ export default function Index() {
   }, [navigate]);
 
   const handleLogout = async () => {
-    await supabase.auth.signOut({ scope: "local" });
+    await supabase.auth.signOut({ scope: "global" });
     navigate("/auth");
   };
 
